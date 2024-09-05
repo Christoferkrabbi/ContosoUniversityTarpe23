@@ -1,0 +1,9 @@
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.csproj.AssemblyReference.cache
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.AssemblyInfoInputs.cache
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.AssemblyInfo.cs
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.csproj.CoreCompileInputs.cache
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.RazorAssemblyInfo.cache
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.RazorAssemblyInfo.cs
+C:\Users\Christian\Desktop\Programmeerimine Aasta 2\Controllviewuniversity\Controllviewuniversity\obj\Debug\net8.0\Controllviewuniversity.sourcelink.json
