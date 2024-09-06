@@ -230,7 +230,7 @@ namespace ContosoUniversity.Controllers
             return _context.Students.Any(e => e.ID == id);
         }
 
-        public async Task<IActionResult> Clone(int? id)
+        public async Task<IActionResult> Clone(int? id) 
         {
             if (id == null)
             {
