@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chria\\source\\repos\\TARpe23Contoso23\\Controllviewuniversity\\ContosoUniversity.csproj": {}
+    "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chria\\source\\repos\\TARpe23Contoso23\\Controllviewuniversity\\ContosoUniversity.csproj": {
+    "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chria\\source\\repos\\TARpe23Contoso23\\Controllviewuniversity\\ContosoUniversity.csproj",
+        "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
         "projectName": "ContosoUniversity",
-        "projectPath": "C:\\Users\\Chria\\source\\repos\\TARpe23Contoso23\\Controllviewuniversity\\ContosoUniversity.csproj",
-        "packagesPath": "C:\\Users\\Chria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chria\\source\\repos\\TARpe23Contoso23\\Controllviewuniversity\\obj\\",
+        "projectPath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
+        "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Chria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

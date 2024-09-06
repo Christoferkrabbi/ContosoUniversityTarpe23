@@ -18,7 +18,7 @@ namespace ContosoUniversity.Data
             //objekyi õpilastega, mis lisatakse siis, kui õpilasi sisestatud ei ole
             var students = new Student[]
             {
-                 new Student {FirstMidName ="Artjom", LastName="", EnrollmentDate=DateTime.Parse("2069-04-20")},
+                new Student {FirstMidName ="Artjom", LastName="seep", EnrollmentDate=DateTime.Parse("2069-04-20")},
                 new Student {FirstMidName ="Meredeith", LastName="Alonso", EnrollmentDate=DateTime.Parse("2002-09-01") },
                 new Student {FirstMidName ="Christofer", LastName="Krabbi", EnrollmentDate=DateTime.Parse("2007-01-23") },
                 new Student {FirstMidName ="Yan", LastName="Li", EnrollmentDate=DateTime.Parse("2065-07-21") },
@@ -41,7 +41,7 @@ namespace ContosoUniversity.Data
             //Eelnev struktuur, kuid kursustega: \/
             var courses = new Course[]
             {
-            new Course{CourseID =1050, Title ="Keemia", Credits=3 },
+                new Course{CourseID =1050, Title ="Keemia", Credits=3 },
                 new Course{CourseID =4022, Title ="Matemaatika", Credits=3 },
                 new Course{CourseID =4041, Title ="Mikroökonoomia", Credits=3 },
                 new Course{CourseID =1045, Title ="Kirjandus", Credits=4 },
@@ -62,7 +62,7 @@ namespace ContosoUniversity.Data
 
             var enrollments = new Enrollment[]
             {
-               new Enrollment {StudentID=1, CourseID=1050,Grade =Grade.A},
+                new Enrollment {StudentID=1, CourseID=1050,Grade =Grade.A},
                 new Enrollment {StudentID=2, CourseID=4022,Grade =Grade.C},
                 new Enrollment {StudentID=3, CourseID=4041,Grade =Grade.A},
                 new Enrollment {StudentID=4, CourseID=1045,Grade =Grade.F},
