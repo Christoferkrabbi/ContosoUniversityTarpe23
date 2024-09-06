@@ -179,7 +179,7 @@ namespace ContosoUniversity.Controllers
             {
                 return NotFound();
             }
-
+            
             return View("Details", student);
         }
 
