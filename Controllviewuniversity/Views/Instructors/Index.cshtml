@@ -1,0 +1,51 @@
+﻿@model ContosoUniversity.Models.InstructorIndexData
+@{
+    ViewData["Title"] = "Instructors";
+}
+<h2>Instructors</h2>
+<p>
+    <a asp-action="Create"> Create New Instructor</a>
+</p>
+
+<table class ="table"></table>
+<thead>
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Hire Date</th>
+        <th>Office Location</th>
+        <th></th>
+    </tr>
+</thead>
+<tbody>
+    @foreach var item in Model.Instructors)
+    {
+        string selectedRow ="";
+        if(item.ID ==(int?)ViewData["InstructorID"])
+        {
+            selectedRow="Table-Success";
+        }
+        <tr>
+            <td>@Html.DisplayFor(ModelItem => item.LastName</td>
+            <td>@Html.DisplayFor(ModelItem => item.FirstMidName</td>
+            <td>@Html.DisplayFor(ModelItem => item.Hiredate
+                <td>
+                @if (item.OfficeAssignment!=null)
+            {
+                @item.OfficeAssignment.Location
+            }
+        </td>
+        <td>
+        @foreach(var courses in item.Assignments )
+        {
+            @courses.Course.CourseID @:@courses.Course.Title <br />
+
+        }
+        </td>
+        <td>@Html</td>
+        </tr>
+    }
+</tbody>
+
+
+

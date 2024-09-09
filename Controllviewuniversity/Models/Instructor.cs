@@ -29,7 +29,7 @@ namespace ContosoUniversity.Models
         [Display(Name ="Hired on:")]
         public DateTime Hiredate { get; set; }
 
-        public ICollection<CourseAssignment> CourseAssignmemnts { get; set; }
+        public ICollection<CourseAssignment> CourseAssignments { get; set; }
         public OfficeAssignment? OfficeAssignment { get; set; } 
 
         public int? Age { get; set; } //vanus
