@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JKdb5NBiJthmlFucKvBXY5jLV1CgCkoBYc8jcwQ7mXZWOOKKTthzC+2CuN1IMkPpURYPTg2443Kt4zY833WPNw==",
+  "dgSpecHash": "bDZ1orl0jkQ9QGSPMF1zI/r/AhKVXmN5QkNAb7UmdorVhDEOrvl+qSluvPFRbt9w4jCkwqmUvp3y56YmonjgWA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
+  "projectFilePath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversityTARpe23CK\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\opilane\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\opilane\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

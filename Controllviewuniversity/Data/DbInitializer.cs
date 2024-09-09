@@ -15,7 +15,7 @@ namespace ContosoUniversity.Data
                 return;
             }
 
-            //objekyi õpilastega, mis lisatakse siis, kui õpilasi sisestatud ei ole
+            //objekti õpilastega, mis lisatakse siis, kui õpilasi sisestatud ei ole
             var students = new Student[]
             {
                 new Student {FirstMidName ="Artjom", LastName="seep", EnrollmentDate=DateTime.Parse("2069-04-20")},
@@ -35,10 +35,10 @@ namespace ContosoUniversity.Data
             {
                 context.Students.Add(student);
             }
-            //Ja andmebaasi muudatused salvestatakse
+            //andmebaasi muudatused salvestatakse
             context.SaveChanges();
 
-            //Eelnev struktuur, kuid kursustega: \/
+            //Eelnev struktuur, kuid kursustega:
             var courses = new Course[]
             {
                 new Course{CourseID =1050, Title ="Keemia", Credits=3 },
