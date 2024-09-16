@@ -46,7 +46,7 @@
           }
         }
       },
-      "FluentAssertions/6.12.0": {
+      "FluentAssertions/6.12.1": {
         "type": "package",
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.4.0"
@@ -1571,15 +1571,15 @@
         "lib/netstandard2.0/Azure.Identity.xml"
       ]
     },
-    "FluentAssertions/6.12.0": {
-      "sha512": "ZXhHT2YwP9lajrwSKbLlFqsmCCvFJMoRSK9t7sImfnCyd0OB3MhgxdoMcVqxbq1iyxD6mD2fiackWmBb7ayiXQ==",
+    "FluentAssertions/6.12.1": {
+      "sha512": "hciWwryyLw3eonfqhFpOMTXyM1/auJChYslEBA+iGJyuBs5O3t/kA8YaeH4iRo/2Fe3ElSYL86C0miivtZ0f3g==",
       "type": "package",
-      "path": "fluentassertions/6.12.0",
+      "path": "fluentassertions/6.12.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "FluentAssertions.png",
-        "fluentassertions.6.12.0.nupkg.sha512",
+        "fluentassertions.6.12.1.nupkg.sha512",
         "fluentassertions.nuspec",
         "lib/net47/FluentAssertions.dll",
         "lib/net47/FluentAssertions.pdb",
@@ -4142,30 +4142,30 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FluentAssertions >= 6.12.0",
+      "FluentAssertions >= 6.12.1",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\opilane\\.nuget\\packages\\": {},
+    "C:\\Users\\Chria\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\opilane\\source\\repos\\ContosoUniversityTARpe23CK\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
+      "projectUniqueName": "C:\\Users\\Chria\\source\\repos\\ContosoUniversityTarpe23\\Controllviewuniversity\\ContosoUniversity.csproj",
       "projectName": "ContosoUniversity",
-      "projectPath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversityTARpe23CK\\ContosoUniversity2\\Controllviewuniversity\\ContosoUniversity.csproj",
-      "packagesPath": "C:\\Users\\opilane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\opilane\\source\\repos\\ContosoUniversityTARpe23CK\\ContosoUniversity2\\Controllviewuniversity\\obj\\",
+      "projectPath": "C:\\Users\\Chria\\source\\repos\\ContosoUniversityTarpe23\\Controllviewuniversity\\ContosoUniversity.csproj",
+      "packagesPath": "C:\\Users\\Chria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chria\\source\\repos\\ContosoUniversityTarpe23\\Controllviewuniversity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\opilane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Chria\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4200,7 +4200,7 @@
         "dependencies": {
           "FluentAssertions": {
             "target": "Package",
-            "version": "[6.12.0, )"
+            "version": "[6.12.1, )"
           },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
@@ -4236,7 +4236,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

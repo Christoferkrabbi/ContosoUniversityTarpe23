@@ -5,7 +5,7 @@ namespace ContosoUniversity.Models
 {
     public class Student
     {
-        [Key] //primaarvõti optional
+        //[Key] //primaarvõti optional
         public int ID { get; set; }
         public string LastName { get; set; }
         public string FirstMidName { get; set; }

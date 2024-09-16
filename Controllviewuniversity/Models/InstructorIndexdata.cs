@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ContosoUniversity.Models
 {
-    public class InstructorIndexdata : Controller
+    public class InstructorIndexData : Controller
     {
         public IEnumerable<Instructor> Instructors { get; set; }
         public IEnumerable<Course> Courses { get; set; }

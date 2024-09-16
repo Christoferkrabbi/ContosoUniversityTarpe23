@@ -27,7 +27,7 @@ namespace ContosoUniversity.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [Display(Name ="Hired on:")]
-        public DateTime Hiredate { get; set; }
+        public DateTime HireDate { get; set; }
 
         public ICollection<CourseAssignment> CourseAssignments { get; set; }
         public OfficeAssignment? OfficeAssignment { get; set; } 
@@ -39,7 +39,17 @@ namespace ContosoUniversity.Models
         [Display(Name = "Birthday on: ")]
         public int? BirthDay { get; set; } //sünnipäev
 
-
-
+        public Mood? Mood { get; set; } //õpetaja tuju
+        [Display(Name = "Kutsetunnistuse #:")]
+        public string? VocationCredential { get; set; } //kutsekoja kutseregistri tunnistuse väljastuse number
+        public int? WorkYears { get; set; } //tööaastaid selles asutuses
     }
+
+    public enum Mood
+    {
+        Happy, Sad, Anxious, Puzzled, HighAF, Darklord
+    }
+
+
+
 }
