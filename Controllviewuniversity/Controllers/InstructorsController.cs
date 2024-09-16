@@ -147,6 +147,8 @@ namespace ContosoUniversity.Controllers
             return View(instructor);
         }
 
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID,LastName,FirstMidName,HireDate")] Instructor instructor)
