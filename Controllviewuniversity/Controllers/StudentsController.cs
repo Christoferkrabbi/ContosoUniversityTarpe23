@@ -230,7 +230,34 @@ namespace ContosoUniversity.Controllers
             return _context.Students.Any(e => e.ID == id);
         }
 
-       
+        public async Task<IActionResult> Clone(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var student = await _context.Students.AsNoTracking().FirstOrDefaultAsync(m => m.ID == id);
+            if (student == null)
+            {
+                return NotFound();
+            }
+
+
+            var clonedstudent = new Student
+            {
+                FirstMidName = student.FirstMidName,
+                LastName = student.LastName,
+                EnrollmentDate = student.EnrollmentDate
+            };
+
+            _context.Students.Add(clonedstudent);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
+
+
+        }
     }
 }
 
