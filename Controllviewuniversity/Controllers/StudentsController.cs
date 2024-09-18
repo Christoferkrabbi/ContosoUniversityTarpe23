@@ -185,44 +185,7 @@ namespace ContosoUniversity.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var student = await _context.Students.FindAsync(id);
-            if (student == null)
-            {
-                return NotFound();
-            }
-            return View(student);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,LastName,FirstMidName,EnrollmentDate")] Student student)
-        {
-            if (id != student.ID)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                _context.Update(student);
-                await _context.SaveChangesAsync();
-            }                        
-            if (!StudentExists(student.ID))
-            {
-              return NotFound();
-            }
-         
-                
-            return RedirectToAction(nameof(Index));
-
-        }
+       
 
 
         private bool StudentExists(int id)
