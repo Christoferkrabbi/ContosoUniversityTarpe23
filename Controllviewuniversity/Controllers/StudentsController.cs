@@ -14,7 +14,7 @@ namespace ContosoUniversity.Controllers
         {
             _context = context;
         }
-        //get all for index, retrieve all students
+       
         public async Task<IActionResult> Index()
         {
             return View(await _context.Students.ToListAsync());

@@ -42,7 +42,7 @@ namespace ContosoUniversity.Controllers
             {
                 ViewData["CourseID"] = courseId.Value;
                 vm.Enrollments = vm.Courses
-                    .Where(x => x.CourseID == courseId)
+                    .Where(x => x.CourseID == courseId.Value)
                     .Single()
                     .Enrollments;
             }
@@ -62,26 +62,14 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Instructor instructor) //string selectedCourses)
         {
-            //if (selectedCourses == null)
-            //{
-            //    instructor.CourseAssignments = new List<CourseAssignment>();
-            //    foreach (var course in selectedCourses)
-            //    {
-            //        var courseToAdd = new CourseAssignment
-            //        {
-            //            InstructorID = instructor.ID,
-            //            CourseID = course
-            //        };
-            //        instructor.CourseAssignments.Add(courseToAdd);
-            //    }
-            //}
+           
             if (ModelState.IsValid)
             {
                 _context.Add(instructor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            PopulateAssignedCourseData(instructor); //uuendab instructori juures olevaid kursuseid
+            //PopulateAssignedCourseData(instructor); //uuendab instructori juures olevaid kursuseid
             return View(instructor);
         }
         private void PopulateAssignedCourseData(Instructor instructor)

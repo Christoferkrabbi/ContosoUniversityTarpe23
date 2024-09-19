@@ -6,7 +6,7 @@ namespace ContosoUniversity.Data
     {
         public static void Initialize(SchoolContext context)
         {
-            //Teeb, kindaaks, et andmebaas thakse, või oleks olemas
+            //Teeb, kindlaks, et andmebaas thakse, või oleks olemas
             context.Database.EnsureCreated();
 
             //Kui õpliaste tabelis juba on õpilasi, siis väljub funktsioon
