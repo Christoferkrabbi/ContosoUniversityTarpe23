@@ -33,7 +33,7 @@ namespace ContosoUniversity.Models
         public OfficeAssignment? OfficeAssignment { get; set; } 
 
         public int? Age { get; set; } //vanus
-        public string? TeachingSubject { get; set; }// tema õppetatav õppeaine
+                                      //
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
         [Display(Name = "Birthday on: ")]
@@ -41,13 +41,13 @@ namespace ContosoUniversity.Models
 
         public Mood? Mood { get; set; } //õpetaja tuju
         [Display(Name = "Kutsetunnistuse #:")]
-        public string? VocationCredential { get; set; } //kutsekoja kutseregistri tunnistuse väljastuse number
-        public int? WorkYears { get; set; } //tööaastaid selles asutuses
+        public string? VocationCredential { get; set; }
+        
     }
 
     public enum Mood
     {
-        Happy, Sad, Anxious, Puzzled, HighAF, Darklord
+        Happy, Sad, Anxious, Puzzled, HighAF
     }
 
 
