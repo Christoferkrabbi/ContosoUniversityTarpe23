@@ -102,7 +102,36 @@ namespace ContosoUniversity.Controllers
             ViewData["Courses"] = vm;
 
         }
-       
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null) //Kui id on tühi, siis õpilast ei leita
+            {
+                return NotFound();
+            }
+
+            var instructor = await _context.Instructors.FirstOrDefaultAsync(M => M.ID == id); //tehakse õpilase objekt admebaasis oleva id järgi
+
+            if (instructor == null) //Kui student objekt on tühi/null siis ka õpilast ei leia
+            {
+                return NotFound();
+            }
+
+            return View(instructor);
+
+
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var instructor = await _context.Instructors.FindAsync(id); //otsime andmebaasist õpilast id järgi ja paneme ta students nimelisse objekti voi muutujasse
+            _context.Instructors.Remove(instructor);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
 
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
