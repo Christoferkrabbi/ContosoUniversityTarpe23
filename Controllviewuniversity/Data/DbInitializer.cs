@@ -38,8 +38,13 @@ namespace ContosoUniversity.Data
             //andmebaasi muudatused salvestatakse
             context.SaveChanges();
 
-            //Eelnev struktuur, kuid kursustega:
+            if (context.Courses.Any())
+            {
+                return;
+            }
             var courses = new Course[]
+            //Eelnev struktuur, kuid kursustega:
+            var course = new Course[]
             {
                 new Course{CourseID =1050, Title ="Keemia", Credits=3 },
                 new Course{CourseID =4022, Title ="Matemaatika", Credits=3 },
@@ -53,12 +58,11 @@ namespace ContosoUniversity.Data
                 new Course{CourseID =9001, Title ="Videomängud", Credits=1 },
 
             };
-            
-            foreach (Course course in courses) 
-            { 
-                context.Courses.Add(course);
-            }
+            context.Courses.AddRange(courses);
             context.SaveChanges();
+
+
+            if (context.Enrollments.Any()) { return; }
 
             var enrollments = new Enrollment[]
             {
@@ -73,11 +77,14 @@ namespace ContosoUniversity.Data
                 new Enrollment {StudentID=9, CourseID=3141,Grade =Grade.B},
                 new Enrollment {StudentID=10, CourseID=9001,Grade =Grade.D},
             };
-            foreach (Enrollment enrollment in enrollments)
-            {
-                context.Enrollments.Add(enrollment);
-            }
+            context.Enrollments.AddRange(enrollments);
             context.SaveChanges();
+
+            if (context.Instructors.Any()) { return; }
+            var instructors = new Instructor[]
+            {
+                new Instructor{LastName ="Pablo",FirstMidName="Mario",HireDate=DateTime.Parse("2034-04-30")}
+            };
         }
     }
 }
