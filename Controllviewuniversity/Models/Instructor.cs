@@ -42,12 +42,14 @@ namespace ContosoUniversity.Models
         public Mood? Mood { get; set; } //õpetaja tuju
         [Display(Name = "Kutsetunnistuse #:")]
         public string? VocationCredential { get; set; }
-        
+        public int? WorkYears { get; set; } //tööaastaid selles asutuses
+
+
     }
 
     public enum Mood
     {
-        Happy, Sad, Anxious, Puzzled, HighAF
+        Happy, Sad, Anxious, Puzzled, HighAF, Darklord
     }
 
 

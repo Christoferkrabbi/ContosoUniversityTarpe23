@@ -1,0 +1,46 @@
+﻿﻿
+@model IEnumerable<ContosoUniversity.Models.Department>
+@{
+    ViewData["Title"] = "Osakonnad";
+}
+<h1>Departments</h1>
+<p>
+    <a asp action="Create">Make a new department</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.Name)</th>
+            <th> @Html.DisplayNameFor(model => model.Administrator)</th>
+            <th> @Html.DisplayNameFor(model => model.Budget)</th>
+            <th> @Html.DisplayNameFor(model => model.DarkLord)</th>
+            <th> @Html.DisplayNameFor(model => model.Cigarettes)</th>
+            <th> @Html.DisplayNameFor(model => model.StartDate)</th>
+            <th> @Html.DisplayNameFor(model => model.RowVersion)</th>
+            <th>Available Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => department.Name)</td>
+                <td> @Html.DisplayFor(modelItem => department.Administrator.FullName)</td>
+                <td> @Html.DisplayFor(modelItem => department.Budget)</td>
+                <td> @Html.DisplayFor(modelItem => department.DarkLord)</td>
+                <td> @Html.DisplayFor(modelItem => department.Cigarettes)</td>
+                <td> @Html.DisplayFor(modelItem => department.StartDate)</td>
+                <td> @Html.DisplayFor(modelItem => department.RowVersion)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@department.DepartmentID" class="btn btn-dark">Details</a>
+                    <a asp-action="Edit" asp-route-id="@department.DepartmentID" class="btn btn-dark">Edit</a>
+                    <a asp-action="Edit Admin" asp-route-id="@department.DepartmentID" class="btn btn-dark">EditAdmin</a>
+                    <a asp-action="Clone" asp-route-id="@department.DepartmentID" class="btn btn-dark"></a>
+                    <a asp-action="Delete" asp-route-id="@department.DepartmentID" class="btn btn-dark">Delete</a>
+                </td>
+
+            </tr>
+        }
+        </tbody>
+</table>

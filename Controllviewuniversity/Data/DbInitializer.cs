@@ -42,9 +42,8 @@ namespace ContosoUniversity.Data
             {
                 return;
             }
+
             var courses = new Course[]
-            //Eelnev struktuur, kuid kursustega:
-            var course = new Course[]
             {
                 new Course{CourseID =1050, Title ="Keemia", Credits=3 },
                 new Course{CourseID =4022, Title ="Matemaatika", Credits=3 },
@@ -80,11 +79,66 @@ namespace ContosoUniversity.Data
             context.Enrollments.AddRange(enrollments);
             context.SaveChanges();
 
-            if (context.Instructors.Any()) { return; }
+            if (context.Instructors.Any())
+            {
+                return;
+            }
+
             var instructors = new Instructor[]
             {
-                new Instructor{LastName ="Pablo",FirstMidName="Mario",HireDate=DateTime.Parse("2034-04-30")}
+                new Instructor {FirstMidName = "Ban", LastName = "ana", HireDate = DateTime.Parse("2042-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Quantum", LastName = "Kiin", HireDate = DateTime.Parse("2012-04-19"), Mood = Mood.HighAF, VocationCredential = "Basement", WorkYears = 42},
+                new Instructor {FirstMidName = "Owo", LastName = "UwU", HireDate = DateTime.Parse("2002-04-19"), Mood = Mood.Darklord, VocationCredential = "Professional Dissapointment", WorkYears = 9000},
+                new Instructor {FirstMidName = "Cursed", LastName = "Child", HireDate = DateTime.Parse("2013-04-19"), Mood = Mood.HighAF, VocationCredential = "Professional child", WorkYears = 42},
+                new Instructor {FirstMidName = "Pain", LastName = "Misery", HireDate = DateTime.Parse("2016-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Zomer", LastName = "Bimpson", HireDate = DateTime.Parse("2001-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Donald J", LastName = "Trumo", HireDate = DateTime.Parse("1991-04-19"), Mood = Mood.HighAF, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "God", LastName = "Help us", HireDate = DateTime.Parse("1992-02-19"), Mood = Mood.Anxious, VocationCredential = "Very Very Complicated", WorkYears = 365000000},
+                new Instructor {FirstMidName = "This is", LastName = "Cursed", HireDate = DateTime.Parse("1592-01-12"), Mood = Mood.Anxious, VocationCredential = "Complicated", WorkYears = 42},
+
             };
+            context.Instructors.AddRange(instructors);
+            context.SaveChanges();
+
+
+            if (context.Departments.Any())
+            {
+                return;
+            }
+            var departments = new Department[]
+            {
+                new Department {
+                Name = "InfoTechnology",
+                Budget = 0,
+                StartDate = DateTime.Parse("2025/09/24"),
+                Cigarettes = 15,
+                DarkLord = "The darklord of the East \"Bimpson\" with the power of ****** at his fingertips he shows no mercy",
+                InstructorID = 1
+                },
+
+                new Department {
+                Name = "The dark arts",
+                Budget = 15000000,
+                StartDate = DateTime.Parse("0001/03/12"),
+                Cigarettes = 15,
+                DarkLord = "The darklord of the Northern mountains and of scandinavian decent \"Zomber\" he is a devil in human skin and the brother of Dun dun dun Homer simpson",
+                InstructorID = 2
+                },
+
+
+                new Department {
+                Name = "The US election",
+                Budget = 1000000,
+                StartDate = DateTime.Parse("2016/09/24"),
+                Cigarettes = 15,
+                DarkLord = "The darklord of the United States \"Trump\" with the power of nagging at is fingertips he never relents and will annoy you until you give in (To be honest he isnt that cool compared to the rest just saying)",
+                InstructorID = 3
+                }
+
+            };
+            context.Departments.AddRange(departments);
+            context.SaveChanges();
+
         }
     }
 }
