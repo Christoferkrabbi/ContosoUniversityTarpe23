@@ -40,7 +40,8 @@ internal class Program
             pattern: "{controller=Home}/{action=Index}/{id?}");
 
         app.Run();
-        builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+        builder.Services.AddControllersWithViews() .AddRazorRuntimeCompilation();
 
     }
     private static void CreateDbIfNotExists(IHost host)
