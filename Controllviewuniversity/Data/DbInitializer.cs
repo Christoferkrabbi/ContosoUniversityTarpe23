@@ -86,15 +86,15 @@ namespace ContosoUniversity.Data
 
             var instructors = new Instructor[]
             {
-                new Instructor {FirstMidName = "Ban", LastName = "ana", HireDate = DateTime.Parse("2042-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
-                new Instructor {FirstMidName = "Quantum", LastName = "Kiin", HireDate = DateTime.Parse("2012-04-19"), Mood = Mood.HighAF, VocationCredential = "Basement", WorkYears = 42},
-                new Instructor {FirstMidName = "Owo", LastName = "UwU", HireDate = DateTime.Parse("2002-04-19"), Mood = Mood.Darklord, VocationCredential = "Professional Dissapointment", WorkYears = 9000},
-                new Instructor {FirstMidName = "Cursed", LastName = "Child", HireDate = DateTime.Parse("2013-04-19"), Mood = Mood.HighAF, VocationCredential = "Professional child", WorkYears = 42},
-                new Instructor {FirstMidName = "Pain", LastName = "Misery", HireDate = DateTime.Parse("2016-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
-                new Instructor {FirstMidName = "Zomer", LastName = "Bimpson", HireDate = DateTime.Parse("2001-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Onu", LastName = "Uno", HireDate = DateTime.Parse("2042-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Laua", LastName = "Viin", HireDate = DateTime.Parse("2012-04-19"), Mood = Mood.HighAF, VocationCredential = "Basement", WorkYears = 42},
+                new Instructor {FirstMidName = "Shrunk", LastName = "peeter", HireDate = DateTime.Parse("2002-04-19"), Mood = Mood.Darklord, VocationCredential = "Professional Dissapointment", WorkYears = 9000},
+                new Instructor {FirstMidName = "Peeter", LastName = "Pann", HireDate = DateTime.Parse("2013-04-19"), Mood = Mood.HighAF, VocationCredential = "Professional child", WorkYears = 42},
+                new Instructor {FirstMidName = "Friend of", LastName = "Misery", HireDate = DateTime.Parse("2016-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "Boomer", LastName = "Simpson", HireDate = DateTime.Parse("2001-04-19"), Mood = Mood.Darklord, VocationCredential = "Complicated", WorkYears = 42},
                 new Instructor {FirstMidName = "Donald J", LastName = "Trumo", HireDate = DateTime.Parse("1991-04-19"), Mood = Mood.HighAF, VocationCredential = "Complicated", WorkYears = 42},
-                new Instructor {FirstMidName = "God", LastName = "Help us", HireDate = DateTime.Parse("1992-02-19"), Mood = Mood.Anxious, VocationCredential = "Very Very Complicated", WorkYears = 365000000},
-                new Instructor {FirstMidName = "This is", LastName = "Cursed", HireDate = DateTime.Parse("1592-01-12"), Mood = Mood.Anxious, VocationCredential = "Complicated", WorkYears = 42},
+                new Instructor {FirstMidName = "God", LastName = "Help me", HireDate = DateTime.Parse("1992-02-19"), Mood = Mood.Anxious, VocationCredential = "Very Very Complicated", WorkYears = 365000000},
+                new Instructor {FirstMidName = "Darkness", LastName = "Imprisoning me", HireDate = DateTime.Parse("1592-01-12"), Mood = Mood.Anxious, VocationCredential = "Complicated", WorkYears = 42},
 
             };
             context.Instructors.AddRange(instructors);
@@ -117,7 +117,7 @@ namespace ContosoUniversity.Data
                 },
 
                 new Department {
-                Name = "The dark arts",
+                Name = "Black ops",
                 Budget = 15000000,
                 StartDate = DateTime.Parse("0001/03/12"),
                 Cigarettes = 15,
