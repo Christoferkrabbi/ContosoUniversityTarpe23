@@ -170,6 +170,63 @@ namespace ContosoUniversity.Controllers
 
 
 
-		
+        //line 173
+        public async Task<IActionResult> BaseOn(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var department = await _context.Departments
+                .AsNoTracking()
+                .FirstOrDefaultAsync(m => m.DepartmentID == id);
+            if (department == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(department);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> BaseOn(Department department, string action)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var newDepartment = new Department
+                {
+                    Name = department.Name,
+                    Administrator = department.Administrator,
+                    Budget = department.Budget,
+                    StartDate = department.StartDate,
+                    Description = department.Description,
+
+                    People = department.People,
+                    InstructorID = department.InstructorID
+                };
+
+                _context.Add(newDepartment);
+                await _context.SaveChangesAsync();
+
+
+                if (action == "MakeAndDeleteOld")
+                {
+                    var oldDepartment = await _context.Departments.FindAsync(department.DepartmentID);
+                    if (oldDepartment != null)
+                    {
+                        _context.Departments.Remove(oldDepartment);
+                        await _context.SaveChangesAsync();
+                    }
+                }
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(department);
+        }
     }
 }
