@@ -22,10 +22,10 @@ namespace ContosoUniversity.Models
          *  Kaks omapärast andmetüüpi
          */
 
-        public string? DarkLord { get; set; }
-        [Display(Name = "The Person who will annihilate us all")]
+        public string? Description { get; set; }
+        
 
-        public int? Cigarettes { get; set; }
+        public int? People { get; set; }
 
         public int? InstructorID { get; set; }
         [Timestamp]

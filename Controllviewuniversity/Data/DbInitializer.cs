@@ -111,8 +111,8 @@ namespace ContosoUniversity.Data
                 Name = "InfoTechnology",
                 Budget = 0,
                 StartDate = DateTime.Parse("2025/09/24"),
-                Cigarettes = 15,
-                DarkLord = "The darklord of the East \"Bimpson\" with the power of ****** at his fingertips he shows no mercy",
+                People = 15,
+                Description = "Darkness imprisoning me, all that i see absolute horror, I can not live, i can not die,trapped in myself, my body is my holding cell.",
                 InstructorID = 1
                 },
 
@@ -120,8 +120,8 @@ namespace ContosoUniversity.Data
                 Name = "Black ops",
                 Budget = 15000000,
                 StartDate = DateTime.Parse("0001/03/12"),
-                Cigarettes = 15,
-                DarkLord = "The darklord of the Northern mountains and of scandinavian decent \"Zomber\" he is a devil in human skin and the brother of Dun dun dun Homer simpson",
+                People = 15,
+				Description = "I can't remember anyhing,  can't tell if this is true or dream,  deep down inside i feel the scream, this terrible silence stops with me.",
                 InstructorID = 2
                 },
 
@@ -130,8 +130,8 @@ namespace ContosoUniversity.Data
                 Name = "The US election",
                 Budget = 1000000,
                 StartDate = DateTime.Parse("2016/09/24"),
-                Cigarettes = 15,
-                DarkLord = "The darklord of the United States \"Trump\" with the power of nagging at is fingertips he never relents and will annoy you until you give in (To be honest he isnt that cool compared to the rest just saying)",
+                People = 15,
+				Description = "Wait for a sign to flick the switch of death, theres someone else controlling me",
                 InstructorID = 3
                 }
 

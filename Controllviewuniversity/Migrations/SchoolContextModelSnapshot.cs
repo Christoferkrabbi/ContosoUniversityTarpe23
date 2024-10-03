@@ -78,10 +78,7 @@ namespace ContosoUniversity.Migrations
                     b.Property<decimal>("Budget")
                         .HasColumnType("Money");
 
-                    b.Property<int?>("Cigarettes")
-                        .HasColumnType("int");
-
-                    b.Property<string>("DarkLord")
+                    b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("InstructorID")
@@ -91,6 +88,9 @@ namespace ContosoUniversity.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("People")
+                        .HasColumnType("int");
 
                     b.Property<byte?>("RowVersion")
                         .IsConcurrencyToken()
