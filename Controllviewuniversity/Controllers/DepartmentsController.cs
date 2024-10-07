@@ -128,6 +128,7 @@ namespace ContosoUniversity.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Edit(int id, [Bind("DepartmentID, Name, Budget, StartDate, RowVersion, InstructorID, EmployeeAmount, FavoriteFood")] Department department)
 		{
+         
 			if (ModelState.IsValid)
 			{
 				try
@@ -170,7 +171,6 @@ namespace ContosoUniversity.Controllers
 
 
 
-        //line 173
         public async Task<IActionResult> BaseOn(int? id)
         {
             if (id == null)

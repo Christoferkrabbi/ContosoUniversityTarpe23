@@ -1,0 +1,44 @@
+﻿@* @model IEnumerable<ContosoUniversity.Models.Course>
+@{
+    ViewData["Title"] = "Kursused";
+}
+
+<h2>Courses</h2>
+<p>
+    <a asp-action="Create">Add a New Course</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CourseId</th>
+            <th>Title</th>
+            <th>Credits</th>           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string selectedRow = "";
+            if (item.ID == (int?)ViewData["CourseID"])
+            {
+                selectedRow = "table-success";
+            }
+            <tr class="@selectedRow">
+                <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.Credits)</td>
+              
+              
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    <a asp-action="Clone" asp-route-id="@item.ID">Clone</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+*@
