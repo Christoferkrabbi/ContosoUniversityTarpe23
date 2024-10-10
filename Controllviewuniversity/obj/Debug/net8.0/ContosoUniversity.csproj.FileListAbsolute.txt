@@ -834,7 +834,6 @@ C:\Users\opilane\Source\Repos\ContosoUniversityTarpe23\Controllviewuniversity\ob
 C:\Users\opilane\Source\Repos\ContosoUniversityTarpe23\Controllviewuniversity\obj\Debug\net8.0\ContosoUniversity.pdb
 C:\Users\opilane\Source\Repos\ContosoUniversityTarpe23\Controllviewuniversity\obj\Debug\net8.0\ContosoUniversity.genruntimeconfig.cache
 C:\Users\opilane\Source\Repos\ContosoUniversityTarpe23\Controllviewuniversity\obj\Debug\net8.0\ref\ContosoUniversity.dll
-C:\Users\opilane\source\repos\ContosoUniversityTarpe23\Controllviewuniversity\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\opilane\source\repos\ContosoUniversityTarpe23\Controllviewuniversity\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\opilane\source\repos\ContosoUniversityTarpe23\Controllviewuniversity\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\opilane\source\repos\ContosoUniversityTarpe23\Controllviewuniversity\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
@@ -1585,3 +1584,4 @@ C:\Users\opilane\source\repos\ChristoferKrabbiTarpe23\Controllviewuniversity\obj
 C:\Users\opilane\source\repos\ChristoferKrabbiTarpe23\Controllviewuniversity\obj\Debug\net8.0\ContosoUniversity.pdb
 C:\Users\opilane\source\repos\ChristoferKrabbiTarpe23\Controllviewuniversity\obj\Debug\net8.0\ContosoUniversity.genruntimeconfig.cache
 C:\Users\opilane\source\repos\ChristoferKrabbiTarpe23\Controllviewuniversity\obj\Debug\net8.0\ref\ContosoUniversity.dll
+C:\Users\opilane\Source\Repos\ContosoUniversityTarpe23\Controllviewuniversity\bin\Debug\net8.0\refs\System.Text.Json.dll

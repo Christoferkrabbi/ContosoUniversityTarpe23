@@ -1,4 +1,5 @@
-﻿@* @model IEnumerable<ContosoUniversity.Models.Course>
+﻿
+@model IEnumerable<ContosoUniversity.Models.Course>
 @{
     ViewData["Title"] = "Kursused";
 }
@@ -11,34 +12,37 @@
 <table class="table">
     <thead>
         <tr>
-            <th>CourseId</th>
-            <th>Title</th>
-            <th>Credits</th>           
+            <th>@Html.DisplayNameFor(model => model.CourseID)</th>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Credits)</th>
+            <th>available actions</th>       
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var department in Model)
         {
-            string selectedRow = "";
-            if (item.ID == (int?)ViewData["CourseID"])
-            {
-                selectedRow = "table-success";
-            }
-            <tr class="@selectedRow">
-                <td>@Html.DisplayFor(modelItem => item.CourseID)</td>
-                <td>@Html.DisplayFor(modelItem => item.Title)</td>
-                <td>@Html.DisplayFor(modelItem => item.Credits)</td>
+           
+            <tr>
+                 <td>@Html.DisplayFor(modelItem => department.CourseID)</td>
+                <td>@Html.DisplayFor(modelItem => department.Title)</td>
+                <td>@Html.DisplayFor(modelItem => department.Credits)</td>
               
               
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a>
-                    <a asp-action="Details" asp-route-id="@item.ID">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-                    <a asp-action="Clone" asp-route-id="@item.ID">Clone</a>
+                  
+                    <a asp-action="Details" asp-route-id="@department.CourseID">Details</a>
+                        <a asp-action="Delete" asp-route-id="@department.CourseID">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@department.CourseID">Edit</a>                    
+                    
+                @*     <a asp-action="Clone" asp-route-id="@department.CourseID">Clone</a> *@
+                 
                 </td>
             </tr>
+        }
+        @if (Model == null || !Model.Any())
+        {
+        <p>No courses available.</p>
         }
     </tbody>
 </table>
 
-*@

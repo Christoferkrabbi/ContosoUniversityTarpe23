@@ -1,0 +1,37 @@
+﻿
+
+@model ContosoUniversity.Models.Course
+
+@{
+    string action = (string)ViewData["Action"];
+    ViewData["Title"] = action == "Delete" ? "Delete Course" : "Course Details";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Course</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Title</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Title)</dd>
+
+        <dt class="col-sm-2">Credits</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Credits)</dd>
+    </dl>
+</div>
+
+@if (action == "Details")
+{
+    <a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-primary">Edit</a>
+    <a asp-action="Clone" asp-route-id="@Model.CourseID" class="btn btn-outline-primary">Clone</a>
+    <a asp-action="Index" class="btn btn-outline-primary">Back to list</a>
+   
+}
+else if (action == "Delete")
+{
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="CourseID" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-outline-primary">Back to list</a>
+    </form>
+}
