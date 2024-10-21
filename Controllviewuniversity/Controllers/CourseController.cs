@@ -60,6 +60,26 @@ namespace ContosoUniversity.Controllers
 			await _context.SaveChangesAsync();
 			return RedirectToAction(nameof(Index));
 		}
+		public async Task<IActionResult> Clone(int id)
+		{
+			var course = await _context.Courses
+				.FirstOrDefaultAsync(c => c.CourseID == id);
+			if (course == null)
+			{
+				return NotFound();
+			}
+			var maxCourseID = await _context.Courses.MaxAsync(c => c.CourseID);
+			var newCourseID = maxCourseID + 1;
+			var clonedCourse = new Course
+			{
+				CourseID = newCourseID,
+				Title = course.Title,
+				Credits = course.Credits
+			};
+			_context.Courses.Add(clonedCourse);
+			await _context.SaveChangesAsync();
+			return RedirectToAction("Index");
+		}
 
 	}
 }
