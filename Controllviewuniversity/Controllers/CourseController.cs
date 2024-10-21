@@ -198,6 +198,102 @@ namespace ContosoUniversity.Controllers
 			}
 			return View(course);
 		}
+		[HttpGet]
+		public async Task<IActionResult> CreateEdit(int? id)
+		{
+			if (id != null)
+			{
+				ViewBag.mode2 = "edit";
+				var course = await _context.Courses
+					.FirstOrDefaultAsync(c => c.CourseID == id);
+
+				if (course == null)
+				{
+					return NotFound();
+				}
+
+				return View(course);
+			}
+			else
+			{
+				ViewBag.mode2 = "create";
+
+				return View();
+			}
+		}
+
+		[HttpPost, ActionName("CreateEdit")]
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> CreateEdit(int? id, [Bind("CourseID,Title,Credits")] Course course)
+		{
+			if (id != null)
+			{
+				ViewBag.mode2 = "edit";
+			}
+			else
+			{
+				ViewBag.mode2 = "create";
+			}
+			if (ModelState.IsValid)
+			{
+				if (id != null)
+				{
+					var existingCourse = await _context.Courses
+					.FirstOrDefaultAsync(c => c.CourseID == id);
+
+					if (existingCourse == null)
+					{
+						return NotFound();
+					}
+
+					if (course.CourseID < 0)
+					{
+						ModelState.AddModelError("CourseID", "CourseID is negative. Please enter a positive CourseID.");
+						return View(course);
+					}
+
+					if (_context.Courses.Any(c => c.CourseID == course.CourseID))
+					{
+						if (course.CourseID == existingCourse.CourseID)
+						{
+							existingCourse.CourseID = course.CourseID;
+							existingCourse.Title = course.Title;
+							existingCourse.Credits = course.Credits;
+
+							await _context.SaveChangesAsync();
+							return RedirectToAction("Index");
+						}
+						// Add a validation error to the ModelState
+						ModelState.AddModelError("CourseID", "CourseID already exists. Please enter an unique CourseID.");
+						return View(course); // Return the same view with the error message
+					}
+
+					_context.Courses.Remove(existingCourse);
+					_context.Courses.Add(course);
+
+					await _context.SaveChangesAsync();
+					return RedirectToAction("Index");
+				}
+				else
+				{
+					if (_context.Courses.Any(c => c.CourseID == course.CourseID))
+					{
+						// Add a validation error to the ModelState
+						ModelState.AddModelError("CourseID", "CourseID already exists. Please enter an unique CourseID.");
+						return View(course); // Return the same view with the error message
+					}
+					if (course.CourseID < 0)
+					{
+						ModelState.AddModelError("CourseID", "CourseID is negative. Please enter a positive CourseID.");
+						return View(course);
+					}
+					_context.Courses.Add(course);
+					await _context.SaveChangesAsync();
+					return RedirectToAction("Index");
+				}
+			}
+			return View(course);
+		}
 
 
 	}
