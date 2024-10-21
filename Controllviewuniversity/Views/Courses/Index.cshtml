@@ -6,7 +6,7 @@
 
 <h2>Courses</h2>
 <p>
-    <a asp-action="CreateEdit">Add a New Course</a>
+    <a asp-action="CreateEdit">Create a new course</a>
 </p>
 
 <table class="table">
@@ -30,10 +30,10 @@
               
                 <td>
 
-                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="details" class="btn btn-primary">Details</a>
-                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="delete" class=" btn btn-primary">Delete</a>
-                    <a asp-action="Edit" asp-route-id="@course.CourseID">Edit</a>                    
-                    
+                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="details">Details</a>
+                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="delete">Delete</a>
+                    <a asp-action="CreateEdit" asp-route-id="@course.CourseID" >Edit</a>
+
                 @*     <a asp-action="Clone" asp-route-id="@department.CourseID">Clone</a> *@
                  
                 </td>

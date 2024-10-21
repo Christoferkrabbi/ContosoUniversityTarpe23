@@ -50,8 +50,9 @@ else if (mode == "delete")
 	}
 	else if (mode == "details")
 	{
-		<a asp-action="Index" class="btn btn-secondary">Index</a>
-		<a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-secondary">Edit</a>
+		
+		<a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-primary">Edit</a>
 		<a asp-action="Clone" asp-route-id="@Model.CourseID" class="btn btn-secondary">Clone</a>
+		<a asp-action="Index">Back to list</a>
 	}
 </div>

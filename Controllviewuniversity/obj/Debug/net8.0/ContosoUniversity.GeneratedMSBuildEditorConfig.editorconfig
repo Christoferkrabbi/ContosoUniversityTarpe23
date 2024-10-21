@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Chria\source\repos\ContosoUniversityTarpe23\Controllviewuniversity
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Chria/source/repos/ContosoUniversityTarpe23/Controllviewuniversity/Views/Courses/CreateEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xDcmVhdGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Chria/source/repos/ContosoUniversityTarpe23/Controllviewuniversity/Views/Courses/DetailsDelete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xEZXRhaWxzRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
