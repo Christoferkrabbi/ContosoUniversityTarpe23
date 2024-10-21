@@ -1,1 +1,45 @@
-﻿
+﻿@model IEnumerable<ContosoUniversity.Models.Course>
+@{
+    ViewData["Title"] = "Kursused";
+}
+
+<h2>Courses</h2>
+<p>
+    <a asp-action="CreateEdit">Create a new course</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CourseID)</th>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.Credits)</th>
+            <th>available actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+
+            <tr>
+                <td>@Html.DisplayFor(modelItem => course.CourseID)</td>
+                <td>@Html.DisplayFor(modelItem => course.Title)</td>
+                <td>@Html.DisplayFor(modelItem => course.Credits)</td>
+
+
+                <td>
+
+                  
+
+                  
+
+                </td>
+            </tr>
+        }
+        @if (Model == null || !Model.Any())
+        {
+            <p>No courses available.</p>
+        }
+    </tbody>
+</table>
+
