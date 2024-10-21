@@ -30,7 +30,8 @@
               
                 <td>
 
-                   
+                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="details" class="btn btn-primary">Details</a>
+                    <a asp-action="DetailsDelete" asp-route-id="@course.CourseID" asp-route-mode="delete" class=" btn btn-primary">Delete</a>
                     <a asp-action="Edit" asp-route-id="@course.CourseID">Edit</a>                    
                     
                 @*     <a asp-action="Clone" asp-route-id="@department.CourseID">Clone</a> *@

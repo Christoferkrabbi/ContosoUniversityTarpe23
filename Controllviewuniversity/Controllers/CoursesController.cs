@@ -183,7 +183,44 @@ namespace ContosoUniversity.Controllers
             ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "Title", course.CourseID);
             return View(course);
         }
-       
+        [HttpGet]
+        public async Task<IActionResult> DetailsDelete(int? id, string mode)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var course = await _context.Courses
+                .FirstOrDefaultAsync(c => c.CourseID == id);
+
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.Mode = mode;
+
+            return View(course);
+        }
+
+        [HttpPost, ActionName("DetailsDelete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DetailsDeleteConfirmed(int id)
+        {
+            var course = await _context.Courses.FindAsync(id);
+
+            if (course == null)
+            {
+                return NotFound();
+            }
+
+            _context.Courses.Remove(course);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
+        }
+
 
     }
 }
