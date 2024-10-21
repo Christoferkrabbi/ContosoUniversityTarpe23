@@ -22,7 +22,20 @@ namespace ContosoUniversity.Controllers
             var schoolContext = _context.Courses;
             return View(await schoolContext.ToListAsync());
         }
-     
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var course = await _context.Courses
+                .FirstOrDefaultAsync(c => c.CourseID == id);
+            if (course == null)
+            {
+                return NotFound();
+            }
+            return View(course);
+        }
 
     }
 }
