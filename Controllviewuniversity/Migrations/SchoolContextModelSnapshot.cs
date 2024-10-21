@@ -36,6 +36,13 @@ namespace ContosoUniversity.Migrations
                     b.Property<int?>("DepartmentID")
                         .HasColumnType("int");
 
+                    b.Property<int>("ItemId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Mode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

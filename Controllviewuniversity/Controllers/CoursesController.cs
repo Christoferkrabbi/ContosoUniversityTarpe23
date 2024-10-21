@@ -23,46 +23,46 @@ namespace ContosoUniversity.Controllers
             return View(await schoolContext.ToListAsync());
         }
 
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var course = await _context.Courses
-                .FirstOrDefaultAsync(m => m.CourseID == id);
-            if (course == null) { return NotFound(); }
+        //    var course = await _context.Courses
+        //        .FirstOrDefaultAsync(m => m.CourseID == id);
+        //    if (course == null) { return NotFound(); }
 
-            ViewData["Action"] = "Details";
-            return View("DetailsDelete", course);
-        }
+        //    ViewData["Action"] = "Details";
+        //    return View("DetailsDelete", course);
+        //}
 
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+        //public async Task<IActionResult> Delete(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            var course = await _context.Courses
-                .FirstOrDefaultAsync(m => m.CourseID == id);
+        //    var course = await _context.Courses
+        //        .FirstOrDefaultAsync(m => m.CourseID == id);
 
-            if (course == null) { return NotFound(); }
+        //    if (course == null) { return NotFound(); }
 
-            ViewData["Action"] = "Delete";
-            return View("DetailsDelete", course);
-        }
+        //    ViewData["Action"] = "Delete";
+        //    return View("DetailsDelete", course);
+        //}
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var course = await _context.Courses.FindAsync(id);
-            _context.Courses.Remove(course);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    var course = await _context.Courses.FindAsync(id);
+        //    _context.Courses.Remove(course);
+        //    await _context.SaveChangesAsync();
+        //    return RedirectToAction(nameof(Index));
+        //}
 
         public async Task<IActionResult> Clone(int? id)
         {
@@ -183,5 +183,7 @@ namespace ContosoUniversity.Controllers
             ViewData["CourseID"] = new SelectList(_context.Courses, "CourseID", "Title", course.CourseID);
             return View(course);
         }
+       
+
     }
 }
