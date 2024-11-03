@@ -1,4 +1,5 @@
-﻿@model ContosoUniversity.Models.Course
+﻿﻿
+@model ContosoUniversity.Models.Course
 
 @{
 	var mode = ViewBag.mode as string;
@@ -7,12 +8,12 @@
 @if (mode == "details")
 {
 	ViewData["Title"] = "Details";
-		<h2>Details</h2>
+	<h2>Details</h2>
 }
 else if (mode == "delete")
 {
 	ViewData["Title"] = "Delete";
-		<h2>Delete</h2>
+	<h2>Delete</h2>
 }
 
 <div>
@@ -43,16 +44,15 @@ else if (mode == "delete")
 
 	@if (mode == "delete")
 	{
-			<form asp-action="DetailsDelete">
-				<input type="hidden" asp-for="@Model.CourseID" />
-				<input type="submit" value="Delete" class="btn btn-danger" /> | <a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-secondary">Edit</a> | <a asp-action="Index">Cancel</a>
-			</form>
+		<form asp-action="DetailsDelete">
+			<input type="hidden" asp-for="@Model.CourseID" />
+			<input type="submit" value="Delete" class="btn btn-danger" /> | <a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-secondary">Edit</a> | <a asp-action="Index">Cancel</a>
+		</form>
 	}
 	else if (mode == "details")
 	{
-
-			<a asp-action="Edit" asp-route-id="@Model.CourseID" class="btn btn-primary">Edit</a>
-			<a asp-action="Clone" asp-route-id="@Model.CourseID" class="btn btn-secondary">Clone</a>
-			<a asp-action="Index">Back to list</a>
+		<a asp-action="Index" class="btn btn-secondary">Index</a>
+		<a asp-action="CreateEdit" asp-route-id="@Model.CourseID" class="btn btn-secondary">Edit</a>
+		<a asp-action="Clone" asp-route-id="@Model.CourseID" class="btn btn-secondary">Clone</a>
 	}
 </div>

@@ -13,7 +13,7 @@ namespace ContosoUniversity.Models
 
         public int Credits { get; set; }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public ICollection<Enrollment>? Enrollments { get; set; }
       
     }
    
